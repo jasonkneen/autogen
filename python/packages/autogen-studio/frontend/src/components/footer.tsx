@@ -17,21 +17,20 @@ const Footer = () => {
     }
   }, []);
   return (
-    <div className=" text-primary p-3  border-t border-secondary flex ">
-      <div className="text-xs flex-1">
+    <div className="text-primary p-3 border-t border-secondary flex items-center justify-between">
+      <div className="text-xs">
         Maintained by the AutoGen{" "}
         <a
           target={"_blank"}
           rel={"noopener noreferrer"}
-          className="underlipne inline-block border-accent border-b hover:text-accent"
+          className="underline inline-block text-accent hover:text-accent hover:opacity-80"
           href="https://microsoft.github.io/autogen/"
         >
-          {" "}
-          Team.
+          Team
         </a>
       </div>
       {version && (
-        <div className="text-xs ml-2 text-secondary"> v{version}</div>
+        <div className="text-xs text-secondary">v{version}</div>
       )}
     </div>
   );

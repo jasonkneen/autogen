@@ -125,7 +125,7 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
       className={classNames(
         "flex grow   z-50  flex-col gap-y-5 overflow-y-auto border-r border-secondary bg-primary",
         "transition-all duration-300 ease-in-out",
-        showFull ? "w-72 px-6" : "w-16 px-2"
+        showFull ? "w-72 px-4" : "w-14 px-2"
       )}
     >
       {/* App Logo/Title */}
@@ -157,7 +157,7 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
             <ul
               role="list"
               className={classNames(
-                "-mx-2 space-y-1",
+                "-mx-2 space-y-0.5",
                 !showFull && "items-center"
               )}
             >
@@ -168,7 +168,7 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                 const navLink = (
                   <div className="relative">
                     {isActive && (
-                      <div className="bg-accent absolute top-1 left-0.5 z-50 h-8 w-1 bg-opacity-80  rounded">
+                      <div className="bg-accent absolute top-1.5 left-0.5 z-50 h-6 w-0.5 bg-opacity-80 rounded">
                         {" "}
                       </div>
                     )}
@@ -177,7 +177,7 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                       onClick={() => handleNavClick(item)}
                       className={classNames(
                         // Base styles
-                        "group  ml-1 flex gap-x-3 rounded-md mr-2  p-2 text-sm font-medium",
+                        "group  ml-1 flex gap-x-2 rounded-md mr-2  p-1.5 text-sm font-medium",
                         !showFull && "justify-center",
                         // Color states
                         isActive
@@ -188,7 +188,7 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                       {" "}
                       <IconComponent
                         className={classNames(
-                          "h-6 w-6 shrink-0",
+                          "h-5 w-5 shrink-0",
                           isActive
                             ? "text-accent"
                             : "text-secondary group-hover:text-accent"
@@ -238,9 +238,9 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                         ],
                       })
                     }
-                    className="group   flex gap-x-3 rounded-md p-2 text-sm font-medium text-primary hover:text-accent hover:bg-secondary justify-center"
+                    className="group flex gap-x-2 rounded-md p-1.5 text-sm font-medium text-primary hover:text-accent hover:bg-secondary justify-center"
                   >
-                    <Settings className="h-6 w-6 shrink-0 text-secondary group-hover:text-accent" />
+                    <Settings className="h-5 w-5 shrink-0 text-secondary group-hover:text-accent" />
                   </Link>
                 </Tooltip>
                 <div className="hidden md:block">
@@ -255,9 +255,9 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                       className="p-2 rounded-md hover:bg-secondary hover:text-accent text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
                     >
                       {isExpanded ? (
-                        <PanelLeftClose strokeWidth={1.5} className="h-6 w-6" />
+                        <PanelLeftClose strokeWidth={1.5} className="h-5 w-5" />
                       ) : (
-                        <PanelLeftOpen strokeWidth={1.5} className="h-6 w-6" />
+                        <PanelLeftOpen strokeWidth={1.5} className="h-5 w-5" />
                       )}
                     </button>
                   </Tooltip>
@@ -282,9 +282,9 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                           ],
                         })
                       }
-                      className="group flex flex-1 gap-x-3 rounded-md p-2 text-sm font-medium text-primary hover:text-accent hover:bg-secondary"
+                      className="group flex flex-1 gap-x-2 rounded-md p-1.5 text-sm font-medium text-primary hover:text-accent hover:bg-secondary"
                     >
-                      <Settings className="h-6 w-6 shrink-0 text-secondary group-hover:text-accent" />
+                      <Settings className="h-5 w-5 shrink-0 text-secondary group-hover:text-accent" />
                       {showFull && "Settings"}
                     </Link>
                   </div>
@@ -301,9 +301,9 @@ const Sidebar = ({ link, meta, isMobile }: SidebarProps) => {
                       className="p-2 rounded-md hover:bg-secondary hover:text-accent text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
                     >
                       {isExpanded ? (
-                        <PanelLeftClose strokeWidth={1.5} className="h-6 w-6" />
+                        <PanelLeftClose strokeWidth={1.5} className="h-5 w-5" />
                       ) : (
-                        <PanelLeftOpen strokeWidth={1.5} className="h-6 w-6" />
+                        <PanelLeftOpen strokeWidth={1.5} className="h-5 w-5" />
                       )}
                     </button>
                   </Tooltip>
